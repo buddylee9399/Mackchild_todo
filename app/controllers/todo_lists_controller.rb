@@ -9,6 +9,7 @@ class TodoListsController < ApplicationController
   # GET /todo_lists/1 or /todo_lists/1.json
   def show
     @todo_item = TodoItem.new
+    @tasks_remaining = @todo_list.todo_items.where(completed_at:[nil, ''] ).count
   end
 
   # GET /todo_lists/new
