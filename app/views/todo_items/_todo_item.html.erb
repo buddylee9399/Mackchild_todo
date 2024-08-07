@@ -1,36 +1,3 @@
-# THINGS IN HERE
-
-## GEMS
-
-```
-# Use Sass to process CSS
-gem "sassc-rails"
-
-```
-
-- only sass rails for .scss files
-
-
-## MODELS
-- todo lists: has many todo items
-- todo items: has a method to check if the todo item has been completed
-
-```
-  def completed?
-    !completed_at.blank?
-  end
-```
-- then used a block to see if its completed or not
-
-```
-<% if todo_item.completed? %>
-```
-
-## OTHER
-- he did his own styling
-- added a css class based on whether the task is completed or not
-
-```
 <div class="row clearfix">
   <% if todo_item.completed? %>
     <div class="complete">
@@ -62,4 +29,3 @@ gem "sassc-rails"
     </div>
   <% end %>
 </div>
-```

@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  root to: 'static_pages#index'
+  resources :todo_lists do 
+    resources :todo_items do
+      member do
+        patch :complete
+      end
+    end
+  end
+  root to: 'todo_lists#index'
   
   get   'about', to: 'static_pages#about'
   get   'contact', to: 'static_pages#contact'

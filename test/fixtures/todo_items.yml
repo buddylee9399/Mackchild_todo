@@ -1,0 +1,29 @@
+# == Schema Information
+#
+# Table name: todo_items
+#
+#  id           :integer          not null, primary key
+#  completed_at :datetime
+#  content      :string
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#  todo_list_id :integer          not null
+#
+# Indexes
+#
+#  index_todo_items_on_todo_list_id  (todo_list_id)
+#
+# Foreign Keys
+#
+#  todo_list_id  (todo_list_id => todo_lists.id)
+#
+
+one:
+  content: MyString
+  completed_at: 2024-08-06 22:43:26
+  todo_list: one
+
+two:
+  content: MyString
+  completed_at: 2024-08-06 22:43:26
+  todo_list: two
